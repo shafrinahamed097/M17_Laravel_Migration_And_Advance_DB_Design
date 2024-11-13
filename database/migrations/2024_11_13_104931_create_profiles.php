@@ -12,31 +12,22 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('profiles', function (Blueprint $table) {
-           /*
-            $table->bigIncrements('id');
-
-            
-            $table->boolean('is_bangladeshi');
-            $table->bigInteger('vote');
-            $table->binary('photo');
-            $table->char('name', 50);
-            $table->dateTime('voting_date_time');
-            $table->date('voting_date');
-            $table->double('population');
-            $table->enum('group',['A', 'B']);
+            // Define table columns with valid syntax
+            $table->smallIncrements('id');
+            $table->mediumInteger('col1');
+            $table->mediumText('col2');
+            $table->smallInteger('col4');  // Removed the extra argument
+            $table->time('col5');
+            $table->timestamp('col6');
+            $table->tinyInteger('col7');
+            $table->unsignedBigInteger('col8');
+            $table->unsignedInteger('col9');
+            $table->text('col10');
+            $table->unsignedMediumInteger('col11');
+            $table->unsignedTinyInteger('col12');
+            $table->unsignedSmallInteger('col13');
+            $table->tinyText('col14');
             $table->timestamps();
-            */
-
-            $table->id();
-            $table->float('dollar');
-            $table->geometryCollection('positions');
-            $table->geometry('positions_2');
-            $table->integer('population');
-            $table->ipAddress('visitor');
-            $table->json('user_details');
-            $table->longText('blog_post');
-
-            
         });
     }
 
